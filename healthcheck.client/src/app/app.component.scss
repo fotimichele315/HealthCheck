@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column; /* Mantiene layout verticale */
+  align-items: center; /* Centra orizzontalmente */
+  justify-content: start; /* Oppure center se vuoi anche verticale */
+  min-height: 100vh; /* Fa occupare l’intera altezza pagina */
+  padding-top: 2rem; /* Spazio dal top */
+  text-align: center; /* Centra il testo interno */
+}

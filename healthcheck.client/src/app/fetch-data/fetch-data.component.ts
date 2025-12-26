@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment'
   selector: 'app-fetch-data',
   standalone: false,
   templateUrl: './fetch-data.component.html',
-  styleUrl: './fetch-data.component.css'
+  styleUrl: './fetch-data.component.scss'
 })
 export class FetchDataComponent {
 

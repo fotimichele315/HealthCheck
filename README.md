@@ -1,2 +1,2 @@
 # HealthCheck
-HealthCheck – Sample personal project that checks the status of N external servers using ICMP Echo Requests. Built to improve my full-stack web development skills with ASP.NET Core 8 and Angular, based on the book ASP.NET Core 8 and Angular by Valerio De Sanctis.
+HealthCheck – Personal sample project that monitors the status of N external servers using ICMP Echo Requests. The project is based on the examples from the book ASP.NET Core 8 and Angular by Valerio De Sanctis, but with several modifications and updates. I adapted and improved the original code, updating the technologies to the latest stable versions available at the time of development, to better reflect modern best practices in full-stack web development with ASP.NET Core and Angular.
