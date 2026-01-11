@@ -11,8 +11,9 @@ import { HealthCheckComponent } from './health-check/health-check.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
-@NgModule({
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+ @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
@@ -22,7 +23,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   ],
   imports: [
     BrowserModule, HttpClientModule,
-    AppRoutingModule, MatButtonModule, MatIconModule, MatToolbarModule
+    AppRoutingModule, MatButtonModule, MatIconModule, MatToolbarModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the Serviceworker as soon as the app is stable
+      // or after 30 seconds (wichever come firsts).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
