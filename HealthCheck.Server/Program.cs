@@ -28,6 +28,11 @@ if (app.Environment.IsDevelopment())
 {
     app.UseOpenApi();        // JSON OpenAPI
     app.UseSwaggerUi();     // UI interattiva
+} else
+{
+    app.UseExceptionHandler("/Error");
+    app.MapGet("/Error", ()=> Results.Problem());
+    app.UseHsts();
 }
 
 app.UseHealthChecks(new PathString("/api/health"), new CustomHealthCheckOptions());
